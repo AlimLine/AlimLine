@@ -1,0 +1,13 @@
+.navigate_page {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px;
+  gap: 24px;
+
+  .title {
+    font-size: 20px;
+    font-weight: 600;
+    width: max-content;
+    align-self: center;
+  }
+}
