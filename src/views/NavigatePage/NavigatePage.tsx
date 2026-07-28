@@ -3,19 +3,35 @@ import styles from '@/views/NavigatePage/navigate-page.module.scss';
 import PageWrapper from "@/components/wrappers/PageWrapper/PageWrapper.tsx";
 import {useState} from "react";
 import CTabs from "@/components/ui/Tabs/Tabs.tsx";
+import {Tab} from "@mui/material";
+import {clsx} from "clsx";
+import Card from "@/views/NavigatePage/_components/Cards/Card.tsx";
+
+export type TabType = 'All' | 'Hard' | 'Medium' | 'Easy';
 
 const NavigatePage = () => {
   const { t } = useTranslation();
-  const [tab, setTab] = useState('');
-  
+  const [tab, setTab] = useState<TabType>('All');
+
   return (
     <div className={styles.navigate_page}>
-      <PageWrapper>
+      <PageWrapper className={styles.paper_wrapper}>
         <div className={styles.title}>{t('title')}</div>
 
-        <CTabs value={tab} onChange={(_, value) => setTab(value)}>
-
+        <CTabs value={tab} onChange={(_, value) => setTab(value)} className={clsx(styles.tabs, styles[tab])}>
+          <Tab value='All' label='All' />
+          <Tab value='Easy' label='Easy' />
+          <Tab value='Medium' label='Medium' />
+          <Tab value='Hard' label='Hard' />
         </CTabs>
+
+        <div className={clsx(styles.cards, styles[tab])}>
+          <Card
+            className={styles.card}
+            title='Space X'
+            difficult='Easy'
+          />
+        </div>
       </PageWrapper>
     </div>
   );

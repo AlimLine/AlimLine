@@ -14,6 +14,8 @@
     "@emotion/styled": "^11.14.1",
     "@mui/material": "^9.2.0",
     "@mui/system": "^9.2.0",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.1",
     "clsx": "^2.1.1",
     "i18next": "^26.3.6",
     "i18next-http-backend": "^4.0.0",
@@ -22,7 +24,8 @@
     "react-i18next": "^17.0.11",
     "react-router": "^8.3.0",
     "react-router-dom": "^7.18.1",
-    "sass": "^1.102.0"
+    "sass": "^1.102.0",
+    "three": "^0.185.1"
   },
   "devDependencies": {
     "@babel/core": "^7.29.7",

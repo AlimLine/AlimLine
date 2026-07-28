@@ -5,8 +5,26 @@ import styles from './tabs.module.scss';
 import type {ReactNode} from "react";
 
 const StyledTabs = styled(Tabs)(() => ({
-  '&.style': {
-    fontSize: '12px'
+  '&.MuiTabs-root': {
+    width: 'max-content',
+    backgroundColor: "#ececec",
+    borderRadius: '12px',
+
+    '.MuiTabs-list':{
+      position: 'relative',
+      zIndex: 2
+    },
+
+    '.MuiButtonBase-root': {
+      '&.Mui-selected': {
+        color: 'black'
+      }
+    },
+
+    '.MuiTabs-indicator': {
+      backgroundColor: "#c6c6c6",
+      height: '100%'
+    }
   }
 }))
 

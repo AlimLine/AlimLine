@@ -10,6 +10,10 @@ export default defineConfig({
       {
         find: '@',
         replacement: '/src'
+      },
+      {
+        find: '@public',
+        replacement: '/public'
       }
     ],
   }

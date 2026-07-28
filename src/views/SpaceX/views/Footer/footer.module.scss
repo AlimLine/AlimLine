@@ -1,0 +1,17 @@
+.footer {
+  padding-bottom: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  .links {
+    display: flex;
+    gap: 8px;
+
+    a {
+      font-size: 12px;
+      text-decoration: underline;
+    }
+  }
+}

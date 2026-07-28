@@ -1,0 +1,51 @@
+.space_x {
+  display: flex;
+  flex-direction: column;
+  background: black;
+
+  p, a, h1, h3, h4  {
+    font-family: "Roboto Thin", sans-serif;
+    color: white;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  h1 {
+    font-size: 64px;
+    line-height: 75px;
+    font-weight: 400;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 33px;
+  }
+
+  nav {
+    ul {
+      display: flex;
+      gap: 20px;
+    }
+  }
+
+  button {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+
+    &[class~='primary'] {
+      padding: 20px 86px;
+      border: 2px solid white;
+      border-radius: 6px;
+    }
+  }
+}
