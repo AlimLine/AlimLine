@@ -27,9 +27,9 @@ const NavigatePage = () => {
 
         <div className={clsx(styles.cards, styles[tab])}>
           <Card
-            className={styles.card}
             title='Space X'
-            difficult='Easy'
+            difficult='Medium'
+            href='/space-x'
           />
         </div>
       </PageWrapper>

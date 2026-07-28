@@ -34,6 +34,7 @@
   }
 
   .tabs {
+    transition: 0.4s;
     &.Easy {
       @include difficulty-theme
       (
@@ -71,6 +72,7 @@
     padding: 18px;
     border-radius: 18px;
     background: #e6e6e6;
+    transition: 0.4s;
 
     &.Hard {
       background: #f1d5d5;
@@ -82,12 +84,6 @@
 
     &.Easy {
       background: #cce8c6;
-    }
-
-    .card {
-      height: 340px;
-      background: #ffffff;
-      border-radius: 12px;
     }
   }
 }
