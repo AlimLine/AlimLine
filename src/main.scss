@@ -9,8 +9,12 @@
 body {
   width: 100%;
   font-family: Inter, 'sans-serif';
-  height: 100svh;
+  min-height: 100svh;
   background: var(--bg);
   color: var(--text);
   overflow-x: hidden;
+}
+
+#root {
+  min-height: 100svh;
 }

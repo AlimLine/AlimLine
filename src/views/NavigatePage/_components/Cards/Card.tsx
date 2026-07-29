@@ -40,7 +40,6 @@ const Card = (props: CardProps) => {
 
   useEffect(() => {
     const cardElement = cardRef?.current
-    console.log(cardRef)
 
     if (cardElement) {
       setPosition({
