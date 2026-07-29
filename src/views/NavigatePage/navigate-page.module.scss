@@ -38,28 +38,28 @@
     &.Easy {
       @include difficulty-theme
       (
-        #c0ffb3,
-        #30b300,
-        #4bcc00
+        var(--light-green),
+        var(--middle-green),
+        var(--light-middle-green)
       );
     }
 
     &.Medium {
       @include difficulty-theme
       (
-        #fff2b3,
-        #b36500,
-        #cc7a00
+        var(--light-orange),
+        var(--middle-orange),
+        var(--light-middle-orange)
       );
     }
 
     &.Hard {
       @include difficulty-theme
       (
-        #ffbdbd,
-        #ff0000,
-        #7a0000,
-        #000
+        var(--light-red),
+        var(--red),
+        var(--dirt-red),
+        var(--black)
       );
     }
   }
@@ -71,19 +71,19 @@
     gap: 24px;
     padding: 18px;
     border-radius: 18px;
-    background: #e6e6e6;
+    background: var(--gray);
     transition: 0.4s;
 
     &.Hard {
-      background: #f1d5d5;
+      background: var(--thin-red);
     }
 
     &.Medium {
-      background: #e6dfc4;
+      background: var(--thin-orange);
     }
 
     &.Easy {
-      background: #cce8c6;
+      background: var(--thin-green);
     }
   }
 }

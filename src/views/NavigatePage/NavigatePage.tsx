@@ -30,6 +30,8 @@ const NavigatePage = () => {
             title='Space X'
             difficult='Medium'
             href='/space-x'
+            theme='space-x'
+            video='/videos/space-x.mp4'
           />
         </div>
       </PageWrapper>

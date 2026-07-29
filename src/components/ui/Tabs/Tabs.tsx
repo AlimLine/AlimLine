@@ -1,13 +1,11 @@
 import {Tabs, type TabsOwnProps} from "@mui/material";
 import {styled} from "@mui/system";
-import {clsx} from "clsx";
-import styles from './tabs.module.scss';
 import type {ReactNode} from "react";
 
 const StyledTabs = styled(Tabs)(() => ({
   '&.MuiTabs-root': {
     width: 'max-content',
-    backgroundColor: "#ececec",
+    backgroundColor: "var(--light-gray)",
     borderRadius: '12px',
 
     '.MuiTabs-list':{
@@ -16,13 +14,15 @@ const StyledTabs = styled(Tabs)(() => ({
     },
 
     '.MuiButtonBase-root': {
+      color: 'var(--text-light)',
+
       '&.Mui-selected': {
-        color: 'black'
+        color: 'var(--text)'
       }
     },
 
     '.MuiTabs-indicator': {
-      backgroundColor: "#c6c6c6",
+      backgroundColor: "var(--middle-gray)",
       height: '100%'
     }
   }
@@ -41,7 +41,7 @@ const CTabs = (props: TabsProps) => {
   } = props;
 
   return (
-    <StyledTabs className={clsx(className, styles.tabs)} {...other}>
+    <StyledTabs className={className} {...other}>
       {children}
     </StyledTabs>
   );

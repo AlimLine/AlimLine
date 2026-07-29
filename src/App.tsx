@@ -2,7 +2,7 @@ import styles from '@/App.module.scss'
 import {RouterProvider} from "react-router";
 import router from "@/router/router.tsx";
 
-import {initI18n} from "@/scripts/i18n.ts";
+import {initI18n} from "@/helpers/i18n.ts";
 initI18n({initialLocale: localStorage.getItem('locale') || 'ru'})
 
 function App() {
