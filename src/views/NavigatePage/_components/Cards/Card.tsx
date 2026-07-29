@@ -66,12 +66,14 @@ const Card = (props: CardProps) => {
 
   return (
     <>
-      <div className={styles.card_wrapper}>
+      <div
+        className={styles.card_wrapper}
+        onClick={openLink}
+        onMouseEnter={theme ? onMouseEnter : undefined}
+        onMouseLeave={theme ? onMouseLeave : undefined}
+      >
         <div
           className={styles.card}
-          onClick={openLink}
-          onMouseEnter={theme ? onMouseEnter : undefined}
-          onMouseLeave={theme ? onMouseLeave : undefined}
           ref={cardRef}
         >
           {video ? (
