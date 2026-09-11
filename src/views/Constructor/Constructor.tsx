@@ -1,7 +1,7 @@
 // import { useTranslation } from 'react-i18next';
 import React, {useState} from "react";
 import styles from './constructor.module.scss'
-import type {CellProps} from "@/views/Constructor/types.ts";
+import type {CellProps, CellType} from "@/views/Constructor/types.ts";
 import {cellTypesList, getCellImage} from "@/views/Constructor/constants.ts";
 
 const Constructor = () => {
@@ -15,6 +15,7 @@ const Constructor = () => {
     initialElementsArray
   );
   const [isClick, setIsClick] = useState(false);
+  const [brushType, setBrushType] = useState<CellType>('empty');
 
   const mapSettings: React.CSSProperties = {
     width: `${rowElCount * 24}px`,
@@ -32,10 +33,14 @@ const Constructor = () => {
   }
 
   const onMouseClickCell = (cell: CellProps, index: number) => {
-    cell.type = 'grass'
+    cell.type = brushType
     const cacheElements = [...elementsArray]
     cacheElements[index] = cell
     setElementsArray(cacheElements)
+  }
+
+  const onSelectBrush = (value: CellType) => {
+    setBrushType(value)
   }
 
   return (
@@ -55,7 +60,15 @@ const Constructor = () => {
 
       <div className={styles.tools}>
         {cellTypesList?.map((cellType, index) => (
-          <img src={getCellImage[cellType]} alt="" className={styles.cell_icon} key={index} />
+          <img
+            src={getCellImage[cellType]}
+            alt=""
+            className={styles.cell_icon}
+            key={index}
+            onClick={() => {
+              onSelectBrush(cellType)
+            }}
+          />
         ))}
       </div>
     </div>
