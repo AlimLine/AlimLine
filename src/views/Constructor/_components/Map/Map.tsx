@@ -1,5 +1,5 @@
 import type {CellProps, CellType} from "@/views/Constructor/types.ts";
-import styles from "@/views/Constructor/constructor.module.scss";
+import styles from "./map.module.scss";
 import React, {type Dispatch, useState} from "react";
 import {mapColumnElCount, getCellImage, mapRowElCount} from "@/views/Constructor/constants.ts";
 

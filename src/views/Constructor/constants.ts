@@ -11,7 +11,7 @@ export const getCellImage = {
   wood_floor: iWoodFloor
 }
 
-export const cellTypesList: CellType[] = ["empty", 'grass']
+export const cellTypesList: CellType[] = ["empty", 'grass', 'wood', 'wood_floor']
 
 export const mapRowElCount = Math.floor(window.innerWidth / 24)
 export const mapColumnElCount = Math.floor(window.innerHeight / 24)
