@@ -12,7 +12,7 @@ body {
   min-height: 100svh;
   background: var(--bg);
   color: var(--text);
-  overflow-x: hidden;
+  overflow-x: scroll;
 }
 
 #root {
