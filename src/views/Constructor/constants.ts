@@ -19,7 +19,7 @@ export const getCellItemImage = {
 }
 
 export const cellTypesList: CellType[] = ["empty", 'grass', 'wood', 'wood_floor']
-export const cellItemsTypesList: CellItemType[] = ['door_wood_vertical']
+export const cellItemsTypesList: CellItemType[] = ["none", 'door_wood_vertical']
 
 export const mapRowElCount = Math.floor(window.innerWidth / 24)
 export const mapColumnElCount = Math.floor(window.innerHeight / 24)
