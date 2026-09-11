@@ -8,3 +8,6 @@ export const getCellImage = {
 }
 
 export const cellTypesList: CellType[] = ["empty", 'grass']
+
+export const mapRowElCount = Math.floor(window.innerWidth / 24)
+export const mapColumnElCount = Math.floor(window.innerHeight / 24)
