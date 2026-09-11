@@ -64,8 +64,8 @@ const Constructor = () => {
             src={getCellImage[cellType]}
             alt=""
             className={`${styles.cell_icon} ${cellType === brushType ? styles.active : ''}`}
-            key={index}
             onClick={() => onSelectBrush(cellType)}
+            key={index}
           />
         ))}
       </div>
