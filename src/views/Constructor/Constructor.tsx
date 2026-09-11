@@ -1,5 +1,5 @@
 // import { useTranslation } from 'react-i18next';
-import React, {useState} from "react";
+import {useState} from "react";
 import styles from './constructor.module.scss'
 import type {CellProps, CellType} from "@/views/Constructor/types.ts";
 import {cellTypesList, mapColumnElCount, mapRowElCount} from "@/views/Constructor/constants.ts";
