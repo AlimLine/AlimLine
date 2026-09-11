@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import styles from './constructor.module.scss'
 import type {CellProps, CellType} from "@/views/Constructor/types.ts";
 import {cellTypesList, getCellImage} from "@/views/Constructor/constants.ts";
+import Tools from "@/views/Constructor/_components/Tools/Tools.tsx";
 
 const Constructor = () => {
   // const { t } = useTranslation();
@@ -39,9 +40,7 @@ const Constructor = () => {
     setElementsArray(cacheElements)
   }
 
-  const onSelectBrush = (value: CellType) => {
-    setBrushType(value)
-  }
+
 
   return (
     <div className={styles.game_constructor}>
@@ -58,17 +57,11 @@ const Constructor = () => {
         ))}
       </div>
 
-      <div className={styles.tools}>
-        {cellTypesList?.map((cellType, index) => (
-          <img
-            src={getCellImage[cellType]}
-            alt=""
-            className={`${styles.cell_icon} ${cellType === brushType ? styles.active : ''}`}
-            onClick={() => onSelectBrush(cellType)}
-            key={index}
-          />
-        ))}
-      </div>
+      <Tools
+        brushType={brushType}
+        cellTypesList={cellTypesList}
+        setBrushType={setBrushType}
+      />
     </div>
   );
 };
