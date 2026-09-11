@@ -1,4 +1,3 @@
-// import { useTranslation } from 'react-i18next';
 import {useState} from "react";
 import styles from './constructor.module.scss'
 import type {CellProps, CellType} from "@/views/Constructor/types.ts";
@@ -7,7 +6,6 @@ import Tools from "@/views/Constructor/_components/Tools/Tools.tsx";
 import Map from "@/views/Constructor/_components/Map/Map.tsx";
 
 const Constructor = () => {
-  // const { t } = useTranslation();
   const initialElementsArray: CellProps[] = Array.from({length: mapRowElCount * mapColumnElCount}, () => ({
     type: 'empty'
   }))
