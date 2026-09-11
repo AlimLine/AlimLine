@@ -17,6 +17,7 @@
       pointer-events: none;
 
       &.item {
+        position: relative;
         z-index: 3;
       }
     }
