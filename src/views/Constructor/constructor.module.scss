@@ -38,5 +38,17 @@
 
     display: flex;
     gap: 12px;
+
+    .cell_icon {
+      border-radius: 8px;
+
+      &.active {
+        border: 1px solid white;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 }
