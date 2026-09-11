@@ -65,9 +65,7 @@ const Constructor = () => {
             alt=""
             className={styles.cell_icon}
             key={index}
-            onClick={() => {
-              onSelectBrush(cellType)
-            }}
+            onClick={() => onSelectBrush(cellType)}
           />
         ))}
       </div>
