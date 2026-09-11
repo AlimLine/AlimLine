@@ -1,7 +1,7 @@
 import type {CellProps, CellType} from "@/views/Constructor/types.ts";
 import styles from "./map.module.scss";
 import React, {type Dispatch, useState} from "react";
-import {mapColumnElCount, getCellImage, mapRowElCount} from "@/views/Constructor/constants.ts";
+import {mapColumnElCount, getCellImage, mapRowElCount, getCellItemImage} from "@/views/Constructor/constants.ts";
 
 interface MapProps {
   brushType: CellType,
@@ -49,6 +49,8 @@ const Map = (props: MapProps) => {
           onMouseMove={() => isClick ? onMouseClickCell(cell, index) : undefined} key={index}
         >
           <img src={getCellImage[cell?.type]} alt="" className={styles.cell_icon} />
+
+          <img src={getCellItemImage[cell?.item]} alt="" className={`${styles.cell_icon} ${styles.item}`} />
         </div>
       ))}
     </div>
