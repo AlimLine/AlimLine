@@ -1,10 +1,11 @@
-import type {CellProps, CellType} from "@/views/Constructor/types.ts";
+import type {CellItemType, CellProps, CellType} from "@/views/Constructor/types.ts";
 import styles from "./map.module.scss";
 import React, {type Dispatch, useState} from "react";
 import {mapColumnElCount, getCellImage, mapRowElCount, getCellItemImage} from "@/views/Constructor/constants.ts";
 
 interface MapProps {
-  brushType: CellType,
+  brushType: CellType
+  brushItemType: CellItemType
   elementsArray: CellProps[]
   setElementsArray: Dispatch<CellProps[]>
 }
@@ -13,6 +14,7 @@ const Map = (props: MapProps) => {
   const {
     brushType,
     elementsArray,
+    brushItemType,
     setElementsArray
   } = props
   const [isClick, setIsClick] = useState(false);
@@ -24,6 +26,7 @@ const Map = (props: MapProps) => {
 
   const onMouseClickCell = (cell: CellProps, index: number) => {
     cell.type = brushType
+    cell.item = brushItemType
     const cacheElements = [...elementsArray]
     cacheElements[index] = cell
     setElementsArray(cacheElements)

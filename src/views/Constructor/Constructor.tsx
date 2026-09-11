@@ -20,6 +20,7 @@ const Constructor = () => {
     <div className={styles.game_constructor}>
       <Map
         brushType={brushType}
+        brushItemType={brushItemType}
         elementsArray={elementsArray}
         setElementsArray={setElementsArray}
       />
