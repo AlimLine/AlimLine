@@ -7,7 +7,7 @@ import Map from "@/views/Constructor/_components/Map/Map.tsx";
 
 const Constructor = () => {
   const initialElementsArray: CellProps[] = Array.from({length: mapRowElCount * mapColumnElCount}, () => ({
-    type: 'empty'
+    type: 'grass'
   }))
   const [elementsArray, setElementsArray] = useState<CellProps[]>(
     initialElementsArray
