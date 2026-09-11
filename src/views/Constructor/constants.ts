@@ -2,8 +2,8 @@ import iDirt from '@/assets/contructor/cells/dirt.jpg'
 import iGrass from '@/assets/contructor/cells/grass.jpg'
 import iWood from '@/assets/contructor/cells/wood.jpg'
 import iWoodFloor from '@/assets/contructor/cells/wood_floor.jpg'
-import iDoorWoodVertical from '@/assets/contructor/cell_items/door_wood_vertical.jpg'
-import iNone from '@/assets/contructor/cell_items/none.jpg'
+import iDoorWoodVertical from '@/assets/contructor/cell_items/door_wood_vertical.png'
+import iNone from '@/assets/contructor/cell_items/none.png'
 import type {CellItemType, CellType} from "@/views/Constructor/types.ts";
 
 export const getCellImage = {
