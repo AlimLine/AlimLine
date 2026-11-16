@@ -1,0 +1,44 @@
+.rocket {
+  flex-direction: row;
+
+  .side {
+    flex: 1;
+
+    &.left {
+      width: 100%;
+      max-width: 390px;
+      display: flex;
+      flex-direction: column;
+      gap: 45px;
+      padding-block: 556px 324px;
+
+      span {
+        color: gray;
+      }
+
+      h3 {
+        text-transform: uppercase;
+      }
+
+      .statistic {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        font-size: 18px;
+
+        &__row {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+
+      .description {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+  }
+}

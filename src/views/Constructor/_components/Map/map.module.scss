@@ -1,0 +1,33 @@
+.map {
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+
+  .cell {
+    width: 24px;
+    height: 24px;
+    border: 1px solid transparent;
+    user-select: none;
+    position: relative;
+    z-index: 2;
+
+    &.empty {
+      border-color: rgb(0 0 0 / 0.04);
+    }
+
+    &_icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+
+      &.item {
+        z-index: 4;
+      }
+
+      &.ground {
+        z-index: 3;
+      }
+    }
+  }
+}

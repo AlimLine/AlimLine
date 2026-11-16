@@ -1,0 +1,89 @@
+@mixin difficulty-theme(
+  $bg,
+  $color,
+  $selected-bg,
+  $selected-color: #fff
+) {
+  background: $bg;
+
+  :global(.MuiButtonBase-root) {
+    color: $color;
+
+    &[class~='Mui-selected'] {
+      color: $selected-color;
+      background: $selected-bg;
+    }
+  }
+}
+
+.navigate_page {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px;
+  gap: 24px;
+
+  .title {
+    font-size: 20px;
+    font-weight: 600;
+    width: max-content;
+  }
+
+  .paper_wrapper {
+    align-items: center;
+    gap: 24px;
+  }
+
+  .tabs {
+    transition: 0.4s;
+    &.Easy {
+      @include difficulty-theme
+      (
+        var(--light-green),
+        var(--middle-green),
+        var(--light-middle-green)
+      );
+    }
+
+    &.Medium {
+      @include difficulty-theme
+      (
+        var(--light-orange),
+        var(--middle-orange),
+        var(--light-middle-orange)
+      );
+    }
+
+    &.Hard {
+      @include difficulty-theme
+      (
+        var(--light-red),
+        var(--red),
+        var(--dirt-red),
+        var(--black)
+      );
+    }
+  }
+
+  .cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    padding: 18px;
+    border-radius: 18px;
+    background: var(--gray);
+    transition: 0.4s;
+
+    &.Hard {
+      background: var(--thin-red);
+    }
+
+    &.Medium {
+      background: var(--thin-orange);
+    }
+
+    &.Easy {
+      background: var(--thin-green);
+    }
+  }
+}

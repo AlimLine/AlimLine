@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 53px 0 0 0;
+  width: 100%;
+  gap: 28px;
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .main_links, .under_links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .main_links {
+      font-size: 12px;
+    }
+  }
+}
